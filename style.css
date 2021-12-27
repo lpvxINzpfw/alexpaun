@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+    margin: 0;
+    display:grid;
+    grid-gap: 10px;
+    grid-template-columns: 3fr auto 1fr;
+    grid-template-rows: 0.5fr auto auto 1fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    color:whitesmoke;
+    font-family: 'Archivo', sans-serif;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: end;
+    align-self: top;
+}
+
+a {
+    color: whitesmoke;
+}
+
+p {
+    color:whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25em;
+    text-align: end;
+    inline-size: 26em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: end;
+    align-self: end;
+}
+
+footer {
+    color: tomato;
+    font-family: 'Archivo', sans-serif;
+    margin-bottom: 2em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: end;
+    align-self: end;
+}
