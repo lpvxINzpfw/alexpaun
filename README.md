@@ -1,1 +1,1 @@
-Very simple bussines card page
+Very simple bussines card page for alexpaun.net
