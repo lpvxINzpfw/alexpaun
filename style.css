@@ -1,17 +1,18 @@
 body {
     background-color: black;
     margin: 0;
-    display:grid;
+    display: grid;
     grid-gap: 10px;
     grid-template-columns: 3fr auto 1fr;
-    grid-template-rows: 0.5fr auto auto 1fr;
+    grid-template-rows: 0.5fr auto auto auto 1fr;
     width: 100vw;
     height: 100vh;
 }
 
 h1 {
-    color:whitesmoke;
+    color: whitesmoke;
     font-family: 'Archivo', sans-serif;
+    font-size: 3em;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -25,12 +26,12 @@ a {
 }
 
 p {
-    color:whitesmoke;
+    color: whitesmoke;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.25em;
+    font-size: 2em;
     text-align: end;
     line-height: 1.5em;
-    inline-size: 26em;
+    inline-size: 25em;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
@@ -39,14 +40,52 @@ p {
     align-self: end;
 }
 
-footer {
-    color: tomato;
-    font-family: 'Archivo', sans-serif;
-    margin-bottom: 2em;
+button {
+    background-color: black;
+    border-color: black;
+    border: none;
+    width: 8rem;
+    height: 8rem;
+    margin: auto;
+    transition: .5s linear;
+    position: relative;
+    z-index: 1;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
+    margin-right: 0;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 8rem;
+    height: 8rem;
+    background: white;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+}
+
+button:hover::before {
+    transform: scale(1);
+}
+
+footer {
+    color: tomato;
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
     justify-self: end;
     align-self: end;
 }
