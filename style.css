@@ -89,3 +89,9 @@ footer {
     justify-self: end;
     align-self: end;
 }
+
+@media screen and (max-width: 800px) {
+    p {
+        inline-size: auto;
+    }
+}
